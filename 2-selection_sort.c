@@ -11,7 +11,7 @@
 void selection_sort(int *array, size_t size)
 {
 	size_t i = 0, j = 0, posicion = 0;
-	int temporal1 = 0;
+	int temporal1 = 0, cambios = 0, aux = 0;
 
 	if (!array || size < 2)
 		return;
@@ -26,13 +26,15 @@ void selection_sort(int *array, size_t size)
 			{
 				posicion = j;
 				temporal1 = array[j];
+				cambios++;
 			}
 			j++;
 		}
-		if (array[posicion] < array[i])
+		if (array[posicion] < array[i] && cambios > 0)
 		{
-			array[posicion] = array[i];
+			aux = array[i];
 			array[i] = temporal1;
+			array[posicion] = aux;
 			print_array(array, size);
 		}
 		i++;
