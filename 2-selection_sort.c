@@ -1,7 +1,8 @@
 #include "sort.h"
 
 /**
- * bubble_sort - Sort an array with bubble algorithm.
+ * selection_sort - that sorts an array of integers in ascending
+ * order using the Selection sort algorithm.
  * @array: the array to sort.
  * @size: size of the array.
  * Return: nothing
@@ -10,7 +11,7 @@
 void selection_sort(int *array, size_t size)
 {
 	size_t i = 0, j = 0, posicion = 0;
-        int temporal1 = 0;
+	int temporal1 = 0;
 
 	if (!array || size < 2)
 		return;
