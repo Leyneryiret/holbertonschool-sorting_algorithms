@@ -30,7 +30,7 @@ void selection_sort(int *array, size_t size)
 			}
 			j++;
 		}
-		if (i != posicion && cambios > 0)
+		if (array[posicion] < array[i] && cambios > 0)
 		{
 			aux = array[i];
 			array[i] = temporal1;
