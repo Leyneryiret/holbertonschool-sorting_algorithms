@@ -20,7 +20,7 @@ void selection_sort(int *array, size_t size)
 	{
 		temporal1 = array[i];
 		j = i + 1;
-		while (j < size)
+		while (j <= (size - 1))
 		{
 			if (array[j] < temporal1)
 			{
